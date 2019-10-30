@@ -12,9 +12,12 @@
 </head>
 <body>
     
+    <h1>Can I sleep today?</h1>
+    <button type="button" id="btn">Check here</button>
     <div id="output"></div>
     <script>
 
+        let buttonElement = document.getElementById('btn');
         function verifyDate(){
             let today = new Date();
             let month = today.getMonth();
@@ -34,7 +37,7 @@
             }
         }
 
-        window.addEventListener('load', verifyDate);
+        buttonElement.addEventListener('click', verifyDate);
     
     </script>
 </body>
