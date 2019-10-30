@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleepy head</title>
+    <style>
+    
+        
+    
+    </style>
+</head>
+<body>
+    
+    <div id="output"></div>
+    <script>
+
+        function verifyDate(){
+            let today = new Date();
+            let month = today.getMonth();
+            let dayOfWeek = today.getDay();
+            let dayOfMonth = today.getDate();
+            let divElement = document.getElementById('output');
+
+            if(dayOfWeek > 0 && dayOfWeek < 6){
+                if((month == 0 && dayOfMonth == 1) || (month == 6 && dayOfMonth == 4)
+                || (month == 11 && dayOfMonth == 25)){
+                    divElement.innerHTML = 'Sleep in.';
+                }else{
+                    divElement.innerHTML = 'Get up!';
+                }
+            }else{
+                divElement.innerHTML = "Sleep in.";
+            }
+        }
+
+        window.addEventListener('load', verifyDate);
+    
+    </script>
+</body>
+</html>
